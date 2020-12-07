@@ -37,6 +37,7 @@ export default {
             time: 1500,
             timer: 1500,
             isStartRound: false,
+            isStartGame: false,
             sound: [],
             currentNote: 0,
             round: 0
@@ -88,33 +89,37 @@ export default {
             audio.play()
         },
         startGame(){
+            this.isStartGame = false
             this.timer = this.time
             this.sound = []
-            this.round++
-            this.addNote()
+            this.round = 1
+            setTimeout(()=>{this.addNote()},1000) 
         },
         addNote(){
+            this.isStartGame = true
             this.currentNote = 0
             this.sound.push(Math.floor(Math.random() * 4))
             this.playSound()
         },
         playSound(){
-            if(this.sound[this.currentNote] == 0){
-                this.buttonBlueClick()
-            }else if(this.sound[this.currentNote] == 1){
-                this.buttonRedClick()
-            }else if(this.sound[this.currentNote] == 2){
-                this.buttonYellowClick()
-            }else if(this.sound[this.currentNote] == 3){
-                this.buttonGreenClick()
-            }
+            if(this.isStartGame){
+                if(this.sound[this.currentNote] == 0){
+                    this.buttonBlueClick()
+                }else if(this.sound[this.currentNote] == 1){
+                    this.buttonRedClick()
+                }else if(this.sound[this.currentNote] == 2){
+                    this.buttonYellowClick()
+                }else if(this.sound[this.currentNote] == 3){
+                    this.buttonGreenClick()
+                }
 
-            if(this.currentNote + 1 != this.sound.length){
-                this.currentNote++
-                setTimeout(()=>{this.playSound()},this.timer)                
-            }else{
-                this.currentNote = 0;
-                this.isStartRound = true
+                if(this.currentNote + 1 != this.sound.length){
+                    this.currentNote++
+                    setTimeout(()=>{this.playSound()},this.timer)                
+                }else{
+                    this.currentNote = 0;
+                    this.isStartRound = true
+                }
             }
         },
         cheack(noteNumber){
