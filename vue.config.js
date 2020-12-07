@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/-TestTaskForMEDODS-simon--/'
+    publicPath: '/TestTaskForMEDODS-simon/'
 }
