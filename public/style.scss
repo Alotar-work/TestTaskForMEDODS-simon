@@ -1,0 +1,88 @@
+table{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.gamePanel{
+    border: black solid 3px;
+    background-color: lightgray;
+}
+
+.row{
+    display: flex;
+    padding: 20px;
+}
+
+.gameButton{
+    width: 290px;
+    height: 290px;
+}
+
+.buttonBlue{
+    background-color: blue;
+}
+
+.buttonBlueLight {
+    background-color: lightblue;
+    box-shadow: 0 0 12px blue;
+    -moz-box-shadow: 0 0 12px blue;
+    -o-box-shadow: 0 0 12px blue;
+    -ms-box-shadow: 0 0 12px blue;
+    -webkit-box-shadow: 0 0 12px blue;
+}
+
+.buttonRed{
+    background-color: Red;
+}
+
+.buttonRedLight {
+    background-color: lightcoral;
+    box-shadow: 0 0 12px Red;
+    -moz-box-shadow: 0 0 12px Red;
+    -o-box-shadow: 0 0 12px Red;
+    -ms-box-shadow: 0 0 12px Red;
+    -webkit-box-shadow: 0 0 12px Red;
+}
+
+.buttonGreen{
+    background-color: green;
+}
+
+.buttonGreenLight {
+    background-color: lightgreen;
+    box-shadow: 0 0 12px green;
+    -moz-box-shadow: 0 0 12px green;
+    -o-box-shadow: 0 0 12px green;
+    -ms-box-shadow: 0 0 12px green;
+    -webkit-box-shadow: 0 0 12px green;
+}
+
+.buttonYellow{
+    background-color: Yellow;
+}
+
+.buttonYellowLight {
+    background-color: lightyellow;
+    box-shadow: 0 0 12px Yellow;
+    -moz-box-shadow: 0 0 12px Yellow;
+    -o-box-shadow: 0 0 12px Yellow;
+    -ms-box-shadow: 0 0 12px Yellow;
+    -webkit-box-shadow: 0 0 12px Yellow;
+}
+
+.startButton{
+    width: 100px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.complexity{
+    margin-left: 10px;
+}
