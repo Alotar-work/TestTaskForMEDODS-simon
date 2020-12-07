@@ -90,6 +90,7 @@ export default {
         },
         startGame(){
             this.isStartGame = false
+            this.isStartRound = false
             this.timer = this.time
             this.sound = []
             this.round = 1
